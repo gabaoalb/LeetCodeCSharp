@@ -4,6 +4,8 @@ namespace Solutions.Tests.Problems;
 
 public class ContainsDuplicateTest
 {
+    public ContainsDuplicateSolution Solution { get; set; } = new();
+
     [Fact]
     public void Case1()
     {
@@ -11,8 +13,8 @@ public class ContainsDuplicateTest
         int[] nums = [1, 2, 3, 1];
 
         // Act
-        bool result = new ContainsDuplicateSolution().ContainsDuplicate(nums);
-        bool resultSort = new ContainsDuplicateSolution().ContainsDuplicateSorting(nums);
+        bool result = Solution.ContainsDuplicate(nums);
+        bool resultSort = Solution.ContainsDuplicateSorting(nums);
 
         // Assert
         Assert.True(result);
@@ -26,7 +28,7 @@ public class ContainsDuplicateTest
         int[] nums = [1, 2, 3, 4];
 
         // Act
-        bool result = new ContainsDuplicateSolution().ContainsDuplicate(nums);
+        bool result = Solution.ContainsDuplicate(nums);
 
         // Assert
         Assert.False(result);
@@ -39,7 +41,7 @@ public class ContainsDuplicateTest
         int[] nums = [1, 1, 1, 3, 3, 4, 3, 2, 4, 2];
 
         // Act
-        bool result = new ContainsDuplicateSolution().ContainsDuplicate(nums);
+        bool result = Solution.ContainsDuplicate(nums);
 
         // Assert
         Assert.True(result);

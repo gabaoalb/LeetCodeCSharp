@@ -4,6 +4,8 @@ namespace Solutions.Tests.Problems;
 
 public class CarFleetTest
 {
+    public CarFleetSolution Solution { get; set; } = new();
+
     [Fact]
     public void Case1()
     {
@@ -13,8 +15,8 @@ public class CarFleetTest
         int target = 12;
 
         // Act
-        int result = new CarFleetSolution().CarFleet(target, positions, speed);
-        int resultIterator = new CarFleetSolution().CarFleetIterator(target, positions, speed);
+        int result = Solution.CarFleet(target, positions, speed);
+        int resultIterator = Solution.CarFleetIterator(target, positions, speed);
 
         // Assert
         Assert.Equal(3, result);
@@ -30,7 +32,7 @@ public class CarFleetTest
         int target = 100;
 
         // Act
-        int result = new CarFleetSolution().CarFleet(target, positions, speed);
+        int result = Solution.CarFleet(target, positions, speed);
 
         // Assert
         Assert.Equal(1, result);
@@ -45,7 +47,7 @@ public class CarFleetTest
         int target = 10;
 
         // Act
-        int result = new CarFleetSolution().CarFleet(target, positions, speed);
+        int result = Solution.CarFleet(target, positions, speed);
 
         // Assert
         Assert.Equal(2, result);

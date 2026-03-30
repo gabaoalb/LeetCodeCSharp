@@ -5,6 +5,8 @@ namespace Solutions.Tests.Problems;
 
 public class InvertBinaryTreeTest
 {
+    public InvertBinaryTreeSolution Solution { get; set; } = new();
+
     [Fact]
     public void Case1()
     {
@@ -13,7 +15,7 @@ public class InvertBinaryTreeTest
         TreeNode? treeNode = TreeNode.FromArrayIterative(tree);
 
         // Act
-        TreeNode? result = new InvertBinaryTreeSolution().InvertTree(treeNode);
+        TreeNode? result = Solution.InvertTree(treeNode);
         int[] resultArray = TreeNode.ToArray(result);
 
         // Assert
@@ -28,7 +30,7 @@ public class InvertBinaryTreeTest
         TreeNode? treeNode = TreeNode.FromArray(tree);
 
         // Act
-        TreeNode? result = new InvertBinaryTreeSolution().InvertTree(treeNode);
+        TreeNode? result = Solution.InvertTree(treeNode);
         int[] resultArray = TreeNode.ToArray(result);
 
         // Assert
@@ -43,7 +45,7 @@ public class InvertBinaryTreeTest
         TreeNode? treeNode = TreeNode.FromArray(tree);
 
         // Act
-        TreeNode? result = new InvertBinaryTreeSolution().InvertTree(treeNode);
+        TreeNode? result = Solution.InvertTree(treeNode);
         int[] resultArray = TreeNode.ToArray(result);
 
         // Assert
