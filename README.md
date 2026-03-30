@@ -12,4 +12,5 @@ This repository contains solutions to various LeetCode problems implemented in C
 | 104 | [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | Easy | [Code](https://github.com/gabaoalb/LeetCodeCSharp/blob/main/Solutions/Problems/MaximumDepthOfBinaryTree.cs) |
 | 217 | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | Easy | [Code](https://github.com/gabaoalb/LeetCodeCSharp/blob/main/Solutions/Problems/ContainsDuplicate.cs) |
 | 226 | [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/) | Easy | [Code](https://github.com/gabaoalb/LeetCodeCSharp/blob/main/Solutions/Problems/InvertBinaryTree.cs) |
+| 242 | [Valid Anagram](https://leetcode.com/problems/valid-anagram/) | Easy | [Code](https://github.com/gabaoalb/LeetCodeCSharp/blob/main/Solutions/Problems/ValidAnagram.cs) |
 | 853 | [Car Fleet](https://leetcode.com/problems/car-fleet/) | Medium | [Code](https://github.com/gabaoalb/LeetCodeCSharp/blob/main/Solutions/Problems/CarFleet.cs) |
