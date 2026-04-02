@@ -26,14 +26,14 @@ public class TwoSumSolution
     /// <returns></returns>
     public int[] TwoSumSorting(int[] nums, int target)
     {
-        int[] sorted = [.. nums.OrderBy(x => x)];
+        var sorted = nums.Select((num, index) => (num, index)).OrderBy(x => x.num).ToArray();
         (int left, int right) = (0, sorted.Length - 1);
 
         while (left < right)
         {
-            int sum = sorted[left] + sorted[right];
+            int sum = sorted[left].num + sorted[right].num;
             if (sum == target)
-                return [Array.IndexOf(nums, sorted[left]), Array.LastIndexOf(nums, sorted[right])];
+                return [sorted[left].index, sorted[right].index];
             else if (sum < target)
                 left++;
             else
