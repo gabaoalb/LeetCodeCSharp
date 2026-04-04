@@ -2,170 +2,76 @@
 
 public class ValidSudokuSolution
 {
-    public bool IsValidSudoku(char[][] board)
+    /// <summary>
+    /// One-pass solution using hash sets to track seen numbers in rows, columns, and quadrants.
+    /// Time complexity: O(n^2) where n is the size of the board (9 in this case).
+    /// Space complexity: O(n) for the hash sets used to track seen numbers in rows, columns, and quadrants.
+    /// </summary>
+    /// <param name="board"></param>
+    /// <returns></returns>
+    public bool IsValidSudokuOnePassSlow(char[][] board)
     {
-        var quadrantes = new Dictionary<int, HashSet<char>>();
+        var (rows, columns, quadrants) = (
+            Enumerable.Range(0, 9)
+                      .ToDictionary(i => i, _ => new HashSet<char>()),
+            Enumerable.Range(0, 9)
+                      .ToDictionary(i => i, _ => new HashSet<char>()),
+            Enumerable.Range(0, 3)
+                      .SelectMany(x => Enumerable.Range(0, 3), (x, y) => (x, y))
+                      .ToDictionary(chave => chave, _ => new HashSet<char>())
+        );
 
-        for (int x = 0; x < board[0].Length; x++)
+        for (int x = 0; x < board.Length; x++)
         {
-            for (int y = 0; x < board.Length; y++)
+            for (int y = 0; y < board[0].Length; y++)
             {
-                if (x <= 2 && y <= 2)
-                {
-                    //quadrante 1
-                    var result = quadrantes.TryGetValue(1, out var currentHashSet);
-                    if (!result)
-                    {
-                        currentHashSet = [];
-                        quadrantes[1] = currentHashSet;
-                    }
+                if (board[x][y] == '.') continue;
 
-                    if (currentHashSet?.Contains(board[x][y]) ?? false)
-                    {
-                        return false;
-                    }
+                if (rows[x].Contains(board[x][y]) ||
+                    columns[y].Contains(board[x][y]) ||
+                    quadrants[(x / 3, y / 3)].Contains(board[x][y]))
+                    return false;
 
-                    currentHashSet?.Add(board[x][y]);
-                }
-                else if (x > 2 && x <= 5 && y <= 2)
-                {
-                    // quadrante 2
-                    var result = quadrantes.TryGetValue(2, out var currentHashSet);
-                    if (!result)
-                    {
-                        currentHashSet = [];
-                        quadrantes[2] = currentHashSet;
-                    }
-
-                    if (currentHashSet?.Contains(board[x][y]) ?? false)
-                    {
-                        return false;
-                    }
-
-                    currentHashSet?.Add(board[x][y]);
-                }
-                else if (x > 5 && x <= 8 && y <= 2)
-                {
-                    // quadrante 3
-                    var result = quadrantes.TryGetValue(3, out var currentHashSet);
-                    if (!result)
-                    {
-                        currentHashSet = [];
-                        quadrantes[3] = currentHashSet;
-                    }
-
-                    if (currentHashSet?.Contains(board[x][y]) ?? false)
-                    {
-                        return false;
-                    }
-
-                    currentHashSet?.Add(board[x][y]);
-                }
-                else if (x <= 2 && y > 2 && y <= 5)
-                {
-                    // quadrante 4
-                    var result = quadrantes.TryGetValue(4, out var currentHashSet);
-                    if (!result)
-                    {
-                        currentHashSet = [];
-                        quadrantes[4] = currentHashSet;
-                    }
-
-                    if (currentHashSet?.Contains(board[x][y]) ?? false)
-                    {
-                        return false;
-                    }
-
-                    currentHashSet?.Add(board[x][y]);
-                }
-                else if (x > 2 && x <= 5 && y > 2 && y <= 5)
-                {
-                    // quadrante 5
-                    var result = quadrantes.TryGetValue(5, out var currentHashSet);
-                    if (!result)
-                    {
-                        currentHashSet = [];
-                        quadrantes[5] = currentHashSet;
-                    }
-
-                    if (currentHashSet?.Contains(board[x][y]) ?? false)
-                    {
-                        return false;
-                    }
-
-                    currentHashSet?.Add(board[x][y]);
-                }
-                else if (x > 5 && y > 2 && y <= 5)
-                {
-                    // quadrante 6
-                    var result = quadrantes.TryGetValue(6, out var currentHashSet);
-                    if (!result)
-                    {
-                        currentHashSet = [];
-                        quadrantes[6] = currentHashSet;
-                    }
-
-                    if (currentHashSet?.Contains(board[x][y]) ?? false)
-                    {
-                        return false;
-                    }
-
-                    currentHashSet?.Add(board[x][y]);
-                }
-                else if (x <= 2 && y > 5)
-                {
-                    // quadrante 7
-                    var result = quadrantes.TryGetValue(7, out var currentHashSet);
-                    if (!result)
-                    {
-                        currentHashSet = [];
-                        quadrantes[7] = currentHashSet;
-                    }
-
-                    if (currentHashSet?.Contains(board[x][y]) ?? false)
-                    {
-                        return false;
-                    }
-
-                    currentHashSet?.Add(board[x][y]);
-                }
-                else if (x > 2 && x <= 5 && y > 5)
-                {
-                    // quadrante 8
-                    var result = quadrantes.TryGetValue(8, out var currentHashSet);
-                    if (!result)
-                    {
-                        currentHashSet = [];
-                        quadrantes[8] = currentHashSet;
-                    }
-
-                    if (currentHashSet?.Contains(board[x][y]) ?? false)
-                    {
-                        return false;
-                    }
-
-                    currentHashSet?.Add(board[x][y]);
-                }
-                else if (x > 5 && x <= 8 && y > 5)
-                {
-                    // quadrante 9
-                    var result = quadrantes.TryGetValue(9, out var currentHashSet);
-                    if (!result)
-                    {
-                        currentHashSet = [];
-                        quadrantes[9] = currentHashSet;
-                    }
-
-                    if (currentHashSet?.Contains(board[x][y]) ?? false)
-                    {
-                        return false;
-                    }
-
-                    currentHashSet?.Add(board[x][y]);
-                }
+                rows[x]?.Add(board[x][y]);
+                columns[y]?.Add(board[x][y]);
+                quadrants[(x / 3, y / 3)]?.Add(board[x][y]);
             }
         }
 
         return true;
     }
+
+    public bool IsValidSudokuOnePass(char[][] board)
+    {
+        var (rows, columns, quadrants) = (new Dictionary<int, HashSet<char>>(),
+                                          new Dictionary<int, HashSet<char>>(),
+                                          new Dictionary<(int, int), HashSet<char>>());
+
+        for (int x = 0; x < board.Length; x++)
+        {
+            for (int y = 0; y < board[0].Length; y++)
+            {
+                if (board[x][y] == '.') continue;
+
+                var quadrantKey = (x / 3, y / 3);
+
+                if ((rows.ContainsKey(x) && rows[x].Contains(board[x][y])) ||
+                    (columns.ContainsKey(y) && columns[y].Contains(board[x][y])) ||
+                    (quadrants.ContainsKey(quadrantKey) && quadrants[quadrantKey].Contains(board[x][y])))
+                    return false;
+
+                if (!rows.ContainsKey(x)) rows[x] = [];
+                if (!columns.ContainsKey(y)) columns[y] = [];
+                if (!quadrants.ContainsKey(quadrantKey)) quadrants[quadrantKey] = [];
+
+                rows[x]?.Add(board[x][y]);
+                columns[y]?.Add(board[x][y]);
+                quadrants[quadrantKey]?.Add(board[x][y]);
+            }
+        }
+
+        return true;
+    }
+
+    public bool IsValidSudoku(char[][] board) => IsValidSudokuOnePass(board);
 }

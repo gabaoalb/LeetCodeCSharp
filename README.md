@@ -9,6 +9,7 @@ This repository contains solutions to various LeetCode problems implemented in C
 | 2 | [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) | Medium | [Code](https://github.com/gabaoalb/LeetCodeCSharp/blob/main/Solutions/Problems/AddTwoNumbers.cs) |
 | 3 | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | Medium | [Code](https://github.com/gabaoalb/LeetCodeCSharp/blob/main/Solutions/Problems/LongestSubstring.cs) |
 | 4 | [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) | Hard | [Code](http:s://github.com/gabaoalb/LeetCodeCSharp/blob/main/Solutions/Problems/MedianOfTwoSortedArrays.cs) |
+| 36 | [Valid Sudoku](https://leetcode.com/problems/valid-sudoku/) | Medium | [Code](https://github.com/gabaoalb/LeetCodeCSharp/blob/main/Solutions/Problems/ValidSudoku.cs) |
 | 104 | [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | Easy | [Code](https://github.com/gabaoalb/LeetCodeCSharp/blob/main/Solutions/Problems/MaximumDepthOfBinaryTree.cs) |
 | 217 | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | Easy | [Code](https://github.com/gabaoalb/LeetCodeCSharp/blob/main/Solutions/Problems/ContainsDuplicate.cs) |
 | 226 | [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/) | Easy | [Code](https://github.com/gabaoalb/LeetCodeCSharp/blob/main/Solutions/Problems/InvertBinaryTree.cs) |
