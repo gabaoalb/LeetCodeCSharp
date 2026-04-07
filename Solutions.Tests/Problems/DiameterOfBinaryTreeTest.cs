@@ -15,7 +15,7 @@ public class DiameterOfBinaryTreeTest
         TreeNode? treeNode = TreeNode.FromArray(nums);
 
         // Act
-        int actual = Solution.DiameterOfBinaryTree(treeNode);
+        int actual = Solution.DiameterOfBinaryTreeDFS(treeNode);
 
         // Assert
         Assert.Equal(3, actual);
@@ -29,7 +29,7 @@ public class DiameterOfBinaryTreeTest
         TreeNode? treeNode = TreeNode.FromArray(nums);
 
         // Act
-        int actual = Solution.DiameterOfBinaryTree(treeNode);
+        int actual = Solution.DiameterOfBinaryTreeDFS(treeNode);
 
         // Assert
         Assert.Equal(1, actual);

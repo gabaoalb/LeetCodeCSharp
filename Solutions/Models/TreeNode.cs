@@ -29,6 +29,23 @@ public class TreeNode(int val = 0, TreeNode? left = null, TreeNode? right = null
             return null;
     }
 
+    public static TreeNode? FromList(List<int?> array, int level = 0)
+    {
+        TreeNode root = new();
+
+        if (level < array.Count && array[level].HasValue)
+        {
+            root.val = array[level]!.Value;
+            root.left = FromList(array, 2 * level + 1);
+            root.right = FromList(array, 2 * level + 2);
+        }
+
+        if (root.val != 0)
+            return root;
+        else
+            return null;
+    }
+
     /// <summary>
     /// Use iterative bfs logic
     /// </summary>
