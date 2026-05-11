@@ -14,7 +14,7 @@ public class TrappingRainWaterTest
         int expected = 6;
 
         // Act
-        int result = Solution.Trap(height);
+        int result = Solution.TrapDynamicProgramming(height);
 
         // Assert
         Assert.Equal(expected, result);
@@ -28,7 +28,7 @@ public class TrappingRainWaterTest
         int expected = 9;
 
         // Act
-        int result = Solution.Trap(height);
+        int result = Solution.TrapDynamicProgramming(height);
 
         // Assert
         Assert.Equal(expected, result);
