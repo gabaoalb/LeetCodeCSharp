@@ -6,7 +6,7 @@ namespace Solutions.Tests.Problems;
 
 public class MedianOfTwoSortedArraysTest
 {
-    public MedianOfTwoSortedArraysSolution Solution { get; set; } = new();
+    public MedianOfTwoSortedArraysSolution Solution { get; } = new();
 
     [Fact]
     public void Case1()

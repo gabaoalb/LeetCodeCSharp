@@ -5,7 +5,7 @@ namespace Solutions.Tests.Problems;
 
 public class AddTwoNumbersTest
 {
-    public AddTwoNumbersSolution Solution { get; set; } = new();
+    public AddTwoNumbersSolution Solution { get; } = new();
 
     [Fact]
     public void Case1()

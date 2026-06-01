@@ -4,7 +4,7 @@ namespace Solutions.Tests.Problems;
 
 public class TopKFrequentElementsTest
 {
-    public TopKFrequentElementsSolution Solution { get; set; } = new();
+    public TopKFrequentElementsSolution Solution { get; } = new();
 
     [Fact]
     public void Case1()

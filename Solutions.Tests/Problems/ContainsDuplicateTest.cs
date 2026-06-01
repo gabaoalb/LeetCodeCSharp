@@ -4,7 +4,7 @@ namespace Solutions.Tests.Problems;
 
 public class ContainsDuplicateTest
 {
-    public ContainsDuplicateSolution Solution { get; set; } = new();
+    public ContainsDuplicateSolution Solution { get; } = new();
 
     [Fact]
     public void Case1()

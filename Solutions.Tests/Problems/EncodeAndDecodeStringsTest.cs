@@ -4,7 +4,7 @@ namespace Solutions.Tests.Problems;
 
 public class EncodeAndDecodeStringsTest
 {
-    public EncodeAndDecodeStringsSolution Solution { get; set; } = new();
+    public EncodeAndDecodeStringsSolution Solution { get; } = new();
 
     [Fact]
     public void Case1()

@@ -5,7 +5,7 @@ namespace Solutions.Tests.Problems;
 
 public class InvertBinaryTreeTest
 {
-    public InvertBinaryTreeSolution Solution { get; set; } = new();
+    public InvertBinaryTreeSolution Solution { get; } = new();
 
     [Fact]
     public void Case1()

@@ -4,7 +4,7 @@ namespace Solutions.Tests.Problems;
 
 public class TrappingRainWaterTest
 {
-    public TrappingRainWaterSolution Solution { get; set; } = new();
+    public TrappingRainWaterSolution Solution { get; } = new();
 
     [Fact]
     public void Case1()

@@ -4,7 +4,7 @@ namespace Solutions.Tests.Problems;
 
 public class TwoSumTest
 {
-    public TwoSumSolution Solution { get; set; } = new();
+    public TwoSumSolution Solution { get; } = new();
 
     [Fact]
     public void Case1()

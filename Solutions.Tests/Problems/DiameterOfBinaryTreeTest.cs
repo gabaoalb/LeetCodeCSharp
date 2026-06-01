@@ -5,7 +5,7 @@ namespace Solutions.Tests.Problems;
 
 public class DiameterOfBinaryTreeTest
 {
-    public DiameterOfBinaryTreeSolution Solution { get; set; } = new();
+    public DiameterOfBinaryTreeSolution Solution { get; } = new();
 
     [Fact]
     public void Case1()

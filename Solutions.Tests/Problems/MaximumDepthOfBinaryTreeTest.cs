@@ -5,7 +5,7 @@ namespace Solutions.Tests.Problems;
 
 public class MaximumDepthOfBinaryTreeTest
 {
-    public MaximumDepthOfBinaryTreeSolution Solution { get; set; } = new();
+    public MaximumDepthOfBinaryTreeSolution Solution { get; } = new();
 
     [Fact]
     public void Case1()

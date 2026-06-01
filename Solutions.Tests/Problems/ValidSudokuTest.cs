@@ -4,7 +4,7 @@ namespace Solutions.Tests.Problems;
 
 public class ValidSudokuTest
 {
-    public ValidSudokuSolution Solution { get; set; } = new();
+    public ValidSudokuSolution Solution { get; } = new();
 
     [Fact]
     public void Case1()

@@ -4,7 +4,7 @@ namespace Solutions.Tests.Problems;
 
 public class ValidAnagramTest
 {
-    public ValidAnagramSolution Solution { get; set; } = new();
+    public ValidAnagramSolution Solution { get; } = new();
 
     [Fact]
     public void Case1()

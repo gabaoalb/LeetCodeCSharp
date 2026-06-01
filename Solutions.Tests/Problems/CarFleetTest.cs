@@ -4,7 +4,7 @@ namespace Solutions.Tests.Problems;
 
 public class CarFleetTest
 {
-    public CarFleetSolution Solution { get; set; } = new();
+    public CarFleetSolution Solution { get; } = new();
 
     [Fact]
     public void Case1()
