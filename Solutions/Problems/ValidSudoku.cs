@@ -2,6 +2,13 @@
 
 public class ValidSudokuSolution
 {
+    /// <summary>
+    /// Brute force approach: Check each row, column, and 3x3 square for duplicates.
+    /// Time complexity: O(n^2) where n is the size of the board (9 in this case).
+    /// Space complexity: O(n) for the hash sets used to track seen numbers in rows, columns, and squares.
+    /// </summary>
+    /// <param name="board"></param>
+    /// <returns></returns>
     public bool IsValidSudokuBruteForce(char[][] board)
     {
         for (int row = 0; row < board.Length; row++)
@@ -84,6 +91,13 @@ public class ValidSudokuSolution
         return true;
     }
 
+    /// <summary>
+    /// One-pass solution using hash sets to track seen numbers in rows, columns, and quadrants.
+    /// Time complexity: O(n^2) where n is the size of the board (9 in this case).
+    /// Space complexity: O(n) for the hash sets used to track seen numbers in rows
+    /// </summary>
+    /// <param name="board"></param>
+    /// <returns></returns>
     public bool IsValidSudokuOnePass(char[][] board)
     {
         var (rows, columns, quadrants) = (new Dictionary<int, HashSet<char>>(),
@@ -116,6 +130,13 @@ public class ValidSudokuSolution
         return true;
     }
 
+    /// <summary>
+    /// One-pass solution using bitwise operations to track seen numbers in rows, columns, and quadrants.
+    /// Time complexity: O(n^2) where n is the size of the board (9 in this case).
+    /// Space complexity: O(1) since we are using fixed-size integer arrays to track seen numbers in rows, columns, and quadrants.
+    /// </summary>
+    /// <param name="board"></param>
+    /// <returns></returns>
     public bool IsValidSudokuBitwise(char[][] board)
     {
         var (rows, columns, quadrants) = (new int[9], new int[9], new int[9]);
