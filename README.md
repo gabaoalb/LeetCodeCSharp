@@ -13,6 +13,7 @@ This repository contains solutions to various LeetCode problems implemented in C
 | 42 | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) | Hard | [Code](https://github.com/gabaoalb/LeetCodeCSharp/blob/main/Solutions/Problems/TrappingRainWater.cs) |
 | 49 | [Group Anagrams](https://leetcode.com/problems/group-anagrams/) | Medium | [Code](https://github.com/gabaoalb/LeetCodeCSharp/blob/main/Solutions/Problems/GroupAnagrams.cs) |
 | 104 | [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | Easy | [Code](https://github.com/gabaoalb/LeetCodeCSharp/blob/main/Solutions/Problems/MaximumDepthOfBinaryTree.cs) |
+| 128 | [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) | Medium | [Code](https://github.com/gabaoalb/LeetCodeCSharp/blob/main/Solutions/Problems/LongestConsecutiveSequence.cs) |
 | 217 | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | Easy | [Code](https://github.com/gabaoalb/LeetCodeCSharp/blob/main/Solutions/Problems/ContainsDuplicate.cs) |
 | 226 | [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/) | Easy | [Code](https://github.com/gabaoalb/LeetCodeCSharp/blob/main/Solutions/Problems/InvertBinaryTree.cs) |
 | 238 | [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self) | Medium | [Code](https://github.com/gabaoalb/LeetCodeCSharp/blob/main/Solutions/Problems/ProductOfArrayExceptSelf.cs) |
