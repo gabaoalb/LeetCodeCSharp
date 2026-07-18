@@ -3,7 +3,6 @@
 public class MyStack
 {
     #region Constructors
-    public MyStack() { }
     #endregion
 
     #region Fields
@@ -27,7 +26,7 @@ public class MyStack
     {
         while (queue1.Count > 1)
             queue2.Enqueue(queue1.Dequeue());
-        
+
         int result = queue1.Dequeue();
         (queue2, queue1) = (queue1, queue2);
         return result;
@@ -37,7 +36,7 @@ public class MyStack
     {
         while (queue1.Count > 1)
             queue2.Enqueue(queue1.Dequeue());
-        
+
         int result = queue1.Dequeue();
         queue2.Enqueue(result);
         (queue2, queue1) = (queue1, queue2);
