@@ -13,7 +13,7 @@ public class MedianOfTwoSortedArraysSolution
         if (count % 2 == 1)
             return newNums[mid];
         else
-            return (newNums[mid - 1] + newNums[mid]) / 2;
+            return (newNums[mid - 1] + newNums[mid]) / 2.0;
     }
 
     public double FindMedianSortedArrays(int[] nums1, int[] nums2)
@@ -41,6 +41,6 @@ public class MedianOfTwoSortedArraysSolution
         if (count % 2 == 1)
             return newNums[mid];
         else
-            return (newNums[mid - 1] + newNums[mid]) / 2;
+            return (newNums[mid - 1] + newNums[mid]) / 2.0;
     }
 }

@@ -9,7 +9,7 @@ public class LongestSubstringWithoutRepeatingCharacters
         for (int left = 0; left < s.Length; left++)
         {
             var hashSet = new HashSet<char>();
-            for (int right = left + 1; right < s.Length; right++)
+            for (int right = left; right < s.Length; right++)
             {
                 if (hashSet.Contains(s[right]))
                     break;

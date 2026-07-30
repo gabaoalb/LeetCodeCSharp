@@ -47,4 +47,18 @@ public class EncodeAndDecodeStringsTest
         // Assert
         Assert.Equal(strs, decoded);
     }
+
+    [Fact]
+    public void Case4()
+    {
+        // Arrange
+        IList<string> strs = ["a/b", "12/abc", "", "/"];
+
+        // Act
+        string encoded = Solution.Encode(strs);
+        IList<string> decoded = Solution.Decode(encoded);
+
+        // Assert
+        Assert.Equal(strs, decoded);
+    }
 }

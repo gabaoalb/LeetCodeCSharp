@@ -1,4 +1,4 @@
-﻿using LeetCode.Solutions.Models;
+﻿using Solutions.Models;
 
 namespace Solutions.Problems;
 
@@ -31,6 +31,7 @@ public class DiameterOfBinaryTreeSolution
 
     public int DiameterOfBinaryTreeClassMemberDFS(TreeNode? root)
     {
+        result = 0; // reset result for each call to the method
         int Depth(TreeNode? node)
         {
             if (node == null)

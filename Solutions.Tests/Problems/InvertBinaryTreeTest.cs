@@ -1,4 +1,4 @@
-﻿using LeetCode.Solutions.Models;
+﻿using Solutions.Models;
 using Solutions.Problems;
 
 namespace Solutions.Tests.Problems;

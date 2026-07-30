@@ -81,6 +81,8 @@ public class TrappingRainWaterSolution
     /// <returns>The total amount of trapped rainwater.</returns>
     public int Trap(int[] height)
     {
+        if (height.Length == 0) return 0;
+
         (int left, int right) = (0, height.Length - 1);
         (int leftMax, int rightMax) = (height[left], height[right]);
         int trappedWater = 0;

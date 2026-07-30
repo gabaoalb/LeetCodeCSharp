@@ -33,4 +33,18 @@ public class TrappingRainWaterTest
         // Assert
         Assert.Equal(expected, result);
     }
+
+    [Fact]
+    public void Case3()
+    {
+        // Arrange
+        int[] height = [];
+        int expected = 0;
+
+        // Act
+        int result = Solution.Trap(height);
+
+        // Assert
+        Assert.Equal(expected, result);
+    }
 }
