@@ -13,9 +13,13 @@ public class MergeTwoSortedListsSolution
             return list1;
 
         if (list1.val <= list2.val)
-            return new() { val = list1.val, next = MergeTwoListsRecursive(list1.next, list2) };
-        else
-            return new() { val = list2.val, next = MergeTwoListsRecursive(list1, list2.next) };
+        {
+            list1.next = MergeTwoListsRecursive(list1.next, list2);
+            return list1;
+        }
+
+        list2.next = MergeTwoListsRecursive(list1, list2.next);
+        return list2;
     }
 
     public ListNode? MergeTwoListsUnoptimized(ListNode? list1, ListNode? list2)
