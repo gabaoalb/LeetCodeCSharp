@@ -9,6 +9,7 @@ This repository contains solutions to various LeetCode problems implemented in C
 | 2 | [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) | Medium | [Code](https://github.com/gabaoalb/LeetCodeCSharp/blob/main/Solutions/Problems/AddTwoNumbers.cs) |
 | 3 | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | Medium | [Code](https://github.com/gabaoalb/LeetCodeCSharp/blob/main/Solutions/Problems/LongestSubstringWithoutRepeatingCharacters.cs) |
 | 4 | [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) | Hard | [Code](https://github.com/gabaoalb/LeetCodeCSharp/blob/main/Solutions/Problems/MedianOfTwoSortedArrays.cs) |
+| 11 | [Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | Medium | [Code](https://github.com/gabaoalb/LeetCodeCSharp/blob/main/Solutions/Problems/ContainerWithMostWater.cs) |
 | 15 | [3Sum](https://leetcode.com/problems/3sum/) | Medium | [Code](https://github.com/gabaoalb/LeetCodeCSharp/blob/main/Solutions/Problems/ThreeSum.cs) |
 | 21 | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | Easy | [Code](https://github.com/gabaoalb/LeetCodeCSharp/blob/main/Solutions/Problems/MergeTwoSortedLists.cs) |
 | 36 | [Valid Sudoku](https://leetcode.com/problems/valid-sudoku/) | Medium | [Code](https://github.com/gabaoalb/LeetCodeCSharp/blob/main/Solutions/Problems/ValidSudoku.cs) |
