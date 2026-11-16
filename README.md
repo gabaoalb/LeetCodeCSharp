@@ -11,6 +11,7 @@ This repository contains solutions to various LeetCode problems implemented in C
 | 4 | [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) | Hard | [Code](https://github.com/gabaoalb/LeetCodeCSharp/blob/main/Solutions/Problems/MedianOfTwoSortedArrays.cs) |
 | 11 | [Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | Medium | [Code](https://github.com/gabaoalb/LeetCodeCSharp/blob/main/Solutions/Problems/ContainerWithMostWater.cs) |
 | 15 | [3Sum](https://leetcode.com/problems/3sum/) | Medium | [Code](https://github.com/gabaoalb/LeetCodeCSharp/blob/main/Solutions/Problems/ThreeSum.cs) |
+| 20 | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | Easy | [Code](https://github.com/gabaoalb/LeetCodeCSharp/blob/main/Solutions/Problems/ValidParentheses.cs) |
 | 21 | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | Easy | [Code](https://github.com/gabaoalb/LeetCodeCSharp/blob/main/Solutions/Problems/MergeTwoSortedLists.cs) |
 | 36 | [Valid Sudoku](https://leetcode.com/problems/valid-sudoku/) | Medium | [Code](https://github.com/gabaoalb/LeetCodeCSharp/blob/main/Solutions/Problems/ValidSudoku.cs) |
 | 42 | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) | Hard | [Code](https://github.com/gabaoalb/LeetCodeCSharp/blob/main/Solutions/Problems/TrappingRainWater.cs) |
