@@ -10,7 +10,11 @@ public class ThreeSumTest
     public void Case1()
     {
         int[] nums = [-1, 0, 1, 2, -1, -4];
-        List<IList<int>> expected = [[-1, -1, 2], [-1, 0, 1]];
+        List<IList<int>> expected =
+        [
+            [-1, -1, 2],
+            [-1, 0, 1],
+        ];
 
         IList<IList<int>> result = Solution.ThreeSum(nums);
 
@@ -33,7 +37,10 @@ public class ThreeSumTest
     public void Case3()
     {
         int[] nums = [0, 0, 0];
-        List<IList<int>> expected = [[0, 0, 0]];
+        List<IList<int>> expected =
+        [
+            [0, 0, 0],
+        ];
 
         IList<IList<int>> result = Solution.ThreeSum(nums);
 

@@ -42,8 +42,10 @@ public class AddTwoNumbersSolution
             current.next = new ListNode(value);
             current = current.next;
 
-            if (l1 != null) l1 = l1.next;
-            if (l2 != null) l2 = l2.next;
+            if (l1 != null)
+                l1 = l1.next;
+            if (l2 != null)
+                l2 = l2.next;
         }
 
         return dummyHead.next;

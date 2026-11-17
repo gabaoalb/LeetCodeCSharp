@@ -38,7 +38,12 @@ public class ProductOfArrayExceptSelfSolution
         if (zeros > 1)
             return new int[nums.Length];
         if (zeros == 1)
-            return [.. nums.Select(n => n == 0 ? nums.Where(x => x != 0).Aggregate(1, (a, b) => a * b) : 0)];
+            return
+            [
+                .. nums.Select(n =>
+                    n == 0 ? nums.Where(x => x != 0).Aggregate(1, (a, b) => a * b) : 0
+                ),
+            ];
 
         int product = nums.Aggregate(1, (a, b) => a * b);
 

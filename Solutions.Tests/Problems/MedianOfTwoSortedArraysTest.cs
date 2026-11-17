@@ -1,5 +1,3 @@
-
-
 using Solutions.Problems;
 
 namespace Solutions.Tests.Problems;

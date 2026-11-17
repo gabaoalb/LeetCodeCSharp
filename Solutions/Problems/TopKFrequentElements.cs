@@ -9,10 +9,7 @@ public class TopKFrequentElementsSolution
     /// <param name="k">The number of top frequent elements to return.</param>
     /// <returns>An array of the k most frequent elements.</returns>
     public int[] TopKFrequent(int[] nums, int k) =>
-        [.. nums.CountBy(n => n)
-                .OrderByDescending(g => g.Value)
-                .Take(k)
-                .Select(g => g.Key)];
+        [.. nums.CountBy(n => n).OrderByDescending(g => g.Value).Take(k).Select(g => g.Key)];
 
     /// <summary>
     /// Using a min-heap (priority queue) to keep track of the top k frequent elements.
@@ -22,8 +19,7 @@ public class TopKFrequentElementsSolution
     /// <returns>An array of the k most frequent elements.</returns>
     public int[] TopKFrequentHeap(int[] nums, int k)
     {
-        var freq = nums.CountBy(n => n)
-                       .ToDictionary(g => g.Key, g => g.Value);
+        var freq = nums.CountBy(n => n).ToDictionary(g => g.Key, g => g.Value);
 
         var pq = new PriorityQueue<int, int>();
         foreach (var kv in freq)
@@ -48,17 +44,16 @@ public class TopKFrequentElementsSolution
     /// <returns>An array of the k most frequent elements.</returns>
     public int[] TopKFrequentBucket(int[] nums, int k)
     {
-        var freq = nums.CountBy(n => n)
-                       .ToDictionary(g => g.Key, g => g.Value);
+        var freq = nums.CountBy(n => n).ToDictionary(g => g.Key, g => g.Value);
 
-        List<int>[] buckets = [.. Enumerable.Range(0, nums.Length + 1)
-                                            .Select(_ => new List<int>())];
+        List<int>[] buckets =
+        [
+            .. Enumerable.Range(0, nums.Length + 1).Select(_ => new List<int>()),
+        ];
 
         foreach (var kv in freq)
             buckets[kv.Value].Add(kv.Key);
 
-        return [.. buckets.Reverse()
-                          .SelectMany(b => b)
-                          .Take(k)];
+        return [.. buckets.Reverse().SelectMany(b => b).Take(k)];
     }
 }

@@ -27,7 +27,8 @@ public class TrappingRainWaterSolution
     public int TrapDynamicProgramming(int[] height)
     {
         int n = height.Length;
-        if (n == 0) return 0;
+        if (n == 0)
+            return 0;
 
         int[] leftMax = new int[n];
         int[] rightMax = new int[n];
@@ -62,7 +63,8 @@ public class TrappingRainWaterSolution
             while (stack.Count > 0 && height[i] > height[stack.Peek()])
             {
                 int top = stack.Pop();
-                if (stack.Count == 0) break;
+                if (stack.Count == 0)
+                    break;
 
                 int distance = i - stack.Peek() - 1;
                 int boundedHeight = Math.Min(height[i], height[stack.Peek()]) - height[top];
@@ -81,7 +83,8 @@ public class TrappingRainWaterSolution
     /// <returns>The total amount of trapped rainwater.</returns>
     public int Trap(int[] height)
     {
-        if (height.Length == 0) return 0;
+        if (height.Length == 0)
+            return 0;
 
         (int left, int right) = (0, height.Length - 1);
         (int leftMax, int rightMax) = (height[left], height[right]);

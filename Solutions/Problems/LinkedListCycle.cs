@@ -21,7 +21,6 @@ public class LinkedListCycleSolution
         return false;
     }
 
-
     public bool HasCycle(ListNode head)
     {
         (var fast, var slow) = (head, head);

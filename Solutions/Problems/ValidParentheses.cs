@@ -7,11 +7,10 @@ public class ValidParentheses
     /// </summary>
     /// <param name="s">Input string containing parentheses</param>
     /// <returns>True if the parentheses are valid, otherwise false</returns>
-    public bool IsValidBruteForce(string s) {
-        while(s.Contains("()") || s.Contains("[]") || s.Contains("{}"))
-            s = s.Replace("()", "")
-                 .Replace("[]", "")
-                 .Replace("{}", "");
+    public bool IsValidBruteForce(string s)
+    {
+        while (s.Contains("()") || s.Contains("[]") || s.Contains("{}"))
+            s = s.Replace("()", "").Replace("[]", "").Replace("{}", "");
 
         return s.Length == 0;
     }

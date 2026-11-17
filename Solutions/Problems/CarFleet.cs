@@ -3,7 +3,7 @@ namespace Solutions.Problems;
 public class CarFleetSolution
 {
     /*
-        Os carros se movimentam como uma reta no plano cartesiano, a posição Y é a altura de largada a 
+        Os carros se movimentam como uma reta no plano cartesiano, a posição Y é a altura de largada a
         velocidade X é o quanto Y sobe a cada unidade de tempo. O ponto final destas retas é o target
         porém quando elas se interceptam antes ou no target formam uma frota. Nós começamos verificando
         o carro mais próximo da chegada e adicionamos ele na stack, depois verificamos o próximo carro
@@ -15,11 +15,10 @@ public class CarFleetSolution
         var stack = new Stack<double>();
 
         var carInfoArray = position
-            .Zip(speed, (position, speed) => (
-                position,
+            .Zip(
                 speed,
-                time: (double)(target - position) / speed
-            ))
+                (position, speed) => (position, speed, time: (double)(target - position) / speed)
+            )
             .OrderByDescending(x => x.position)
             .ToArray();
 
@@ -35,18 +34,17 @@ public class CarFleetSolution
         return stack.Count;
     }
 
-    /* 
+    /*
         A ideia é muito semelhante a anterior, só o que muda é não usar uma stack.
         Porém a lógica de que o mais lento se torna o puxador de fila é muito mais intuitiva
     */
     public int CarFleetIterator(int target, int[] position, int[] speed)
     {
         var carInfoArray = position
-            .Zip(speed, (position, speed) => (
-                position,
+            .Zip(
                 speed,
-                time: (double)(target - position) / speed
-            ))
+                (position, speed) => (position, speed, time: (double)(target - position) / speed)
+            )
             .OrderByDescending(x => x.position)
             .ToArray();
 

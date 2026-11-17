@@ -30,7 +30,8 @@ public class ValidPalindromeSolution
 
         while (left < right)
         {
-            if (clean[left] != clean[right]) return false;
+            if (clean[left] != clean[right])
+                return false;
             left++;
             right--;
         }

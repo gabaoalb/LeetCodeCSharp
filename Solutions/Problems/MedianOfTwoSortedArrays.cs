@@ -22,16 +22,18 @@ public class MedianOfTwoSortedArraysSolution
 
         while (newNums.Count < nums1.Length + nums2.Length)
         {
-            int? val1 = (p1 >= 0 && p1 < nums1.Length)
-                ? nums1[p1]
-                : null;
-            int? val2 = (p2 >= 0 && p2 < nums2.Length)
-                ? nums2[p2]
-                : null;
+            int? val1 = (p1 >= 0 && p1 < nums1.Length) ? nums1[p1] : null;
+            int? val2 = (p2 >= 0 && p2 < nums2.Length) ? nums2[p2] : null;
 
-            if ((val1.HasValue && val2.HasValue && val1.Value <= val2.Value) || (val1.HasValue && !val2.HasValue))
+            if (
+                (val1.HasValue && val2.HasValue && val1.Value <= val2.Value)
+                || (val1.HasValue && !val2.HasValue)
+            )
                 newNums.Add(nums1[p1++]);
-            else if ((val1.HasValue && val2.HasValue && val1.Value > val2.Value) || (!val1.HasValue && val2.HasValue))
+            else if (
+                (val1.HasValue && val2.HasValue && val1.Value > val2.Value)
+                || (!val1.HasValue && val2.HasValue)
+            )
                 newNums.Add(nums2[p2++]);
         }
 

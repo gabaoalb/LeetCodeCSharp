@@ -11,9 +11,9 @@ public class TwoSumSolution
     public int[] TwoSumBruteForce(int[] nums, int target)
     {
         for (int x = 0; x < nums.Length; x++)
-            for (int y = x + 1; y < nums.Length; y++)
-                if (nums[x] + nums[y] == target)
-                    return [x, y];
+        for (int y = x + 1; y < nums.Length; y++)
+            if (nums[x] + nums[y] == target)
+                return [x, y];
 
         return [];
     }

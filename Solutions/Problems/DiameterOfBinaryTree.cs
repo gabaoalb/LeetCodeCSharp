@@ -21,7 +21,10 @@ public class DiameterOfBinaryTreeSolution
         int rightHeight = Depth(root.right);
 
         int diameter = leftHeight + rightHeight;
-        int sub = Math.Max(DiameterOfBinaryTreeBruteForce(root.left), DiameterOfBinaryTreeBruteForce(root.right));
+        int sub = Math.Max(
+            DiameterOfBinaryTreeBruteForce(root.left),
+            DiameterOfBinaryTreeBruteForce(root.right)
+        );
 
         return Math.Max(diameter, sub);
     }
@@ -103,7 +106,10 @@ public class DiameterOfBinaryTreeSolution
             if (node.right != null && hashMap.TryGetValue(node.right, out var valueRight))
                 (rightHeight, rightDiameter) = valueRight;
 
-            int diameter = Math.Max(leftHeight + rightHeight, Math.Max(leftDiameter, rightDiameter));
+            int diameter = Math.Max(
+                leftHeight + rightHeight,
+                Math.Max(leftDiameter, rightDiameter)
+            );
             int height = 1 + Math.Max(leftHeight, rightHeight);
 
             hashMap[node] = (height, diameter);
