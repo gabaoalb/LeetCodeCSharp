@@ -20,6 +20,7 @@ This repository contains solutions to various LeetCode problems implemented in C
 | 125 | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | Easy | [Code](https://github.com/gabaoalb/LeetCodeCSharp/blob/main/Solutions/Problems/ValidPalindrome.cs) |
 | 128 | [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) | Medium | [Code](https://github.com/gabaoalb/LeetCodeCSharp/blob/main/Solutions/Problems/LongestConsecutiveSequence.cs) |
 | 141 | [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) | Easy | [Code](https://github.com/gabaoalb/LeetCodeCSharp/blob/main/Solutions/Problems/LinkedListCycle.cs) |
+| 155 | [Min Stack](https://leetcode.com/problems/min-stack/) | Medium | [Code](https://github.com/gabaoalb/LeetCodeCSharp/blob/main/Solutions/Problems/MinStack.cs) |
 | 167 | [Two Sum II - Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) | Easy | [Code](https://github.com/gabaoalb/LeetCodeCSharp/blob/main/Solutions/Problems/TwoSumIIInputArrayIsSorted.cs) |
 | 217 | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | Easy | [Code](https://github.com/gabaoalb/LeetCodeCSharp/blob/main/Solutions/Problems/ContainsDuplicate.cs) |
 | 225 | [Implement Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues/) | Easy | [Code](https://github.com/gabaoalb/LeetCodeCSharp/blob/main/Solutions/Problems/ImplementStackUsingQueues.cs) |
