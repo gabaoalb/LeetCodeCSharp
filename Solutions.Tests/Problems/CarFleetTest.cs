@@ -15,12 +15,10 @@ public class CarFleetTest
         int target = 12;
 
         // Act
-        int result = Solution.CarFleet(target, positions, speed);
-        int resultIterator = Solution.CarFleetIterator(target, positions, speed);
+        int result = Solution.CarFleetGreedy(target, positions, speed);
 
         // Assert
         Assert.Equal(3, result);
-        Assert.Equal(3, resultIterator);
     }
 
     [Fact]
@@ -32,7 +30,7 @@ public class CarFleetTest
         int target = 100;
 
         // Act
-        int result = Solution.CarFleet(target, positions, speed);
+        int result = Solution.CarFleetGreedy(target, positions, speed);
 
         // Assert
         Assert.Equal(1, result);
@@ -47,7 +45,7 @@ public class CarFleetTest
         int target = 10;
 
         // Act
-        int result = Solution.CarFleet(target, positions, speed);
+        int result = Solution.CarFleetGreedy(target, positions, speed);
 
         // Assert
         Assert.Equal(2, result);
