@@ -41,8 +41,10 @@ public class InvertBinaryTreeSolution
 
             (node.left, node.right) = (node.right, node.left);
 
-            if (node.left != null) stack.Push(node.left);
-            if (node.right != null) stack.Push(node.right);
+            if (node.left != null)
+                stack.Push(node.left);
+            if (node.right != null)
+                stack.Push(node.right);
         }
 
         return root;
@@ -50,7 +52,7 @@ public class InvertBinaryTreeSolution
 
     /// <summary>
     /// BFS Algo
-    /// Algoritmo de Busca em Largura 
+    /// Algoritmo de Busca em Largura
     /// </summary>
     /// <param name="root"></param>
     /// <returns></returns>
@@ -68,8 +70,10 @@ public class InvertBinaryTreeSolution
 
             (node.left, node.right) = (node.right, node.left);
 
-            if (node.left != null) queue.Enqueue(node.left);
-            if (node.right != null) queue.Enqueue(node.right);
+            if (node.left != null)
+                queue.Enqueue(node.left);
+            if (node.right != null)
+                queue.Enqueue(node.right);
         }
 
         return root;

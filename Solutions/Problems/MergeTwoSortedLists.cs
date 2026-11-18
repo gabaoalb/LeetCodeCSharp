@@ -4,7 +4,7 @@ namespace Solutions.Problems;
 
 public class MergeTwoSortedListsSolution
 {
-    public ListNode? MergeTwoListsRecursive(ListNode? list1, ListNode? list2)
+    public ListNode<int>? MergeTwoListsRecursive(ListNode<int>? list1, ListNode<int>? list2)
     {
         if (list1 == null)
             return list2;
@@ -12,69 +12,69 @@ public class MergeTwoSortedListsSolution
         if (list2 == null)
             return list1;
 
-        if (list1.val <= list2.val)
+        if (list1.Value <= list2.Value)
         {
-            list1.next = MergeTwoListsRecursive(list1.next, list2);
+            list1.Next = MergeTwoListsRecursive(list1.Next, list2);
             return list1;
         }
 
-        list2.next = MergeTwoListsRecursive(list1, list2.next);
+        list2.Next = MergeTwoListsRecursive(list1, list2.Next);
         return list2;
     }
 
-    public ListNode? MergeTwoListsUnoptimized(ListNode? list1, ListNode? list2)
+    public ListNode<int>? MergeTwoListsUnoptimized(ListNode<int>? list1, ListNode<int>? list2)
     {
         if (list1 == null && list2 == null)
             return null;
 
-        ListNode? result = new();
+        ListNode<int>? result = new();
         var current = result;
 
         while (list1 != null || list2 != null)
         {
-            if (list2 == null || (list1 != null && list1.val <= list2.val))
+            if (list2 == null || (list1 != null && list1.Value <= list2.Value))
             {
-                current.val = list1!.val;
-                list1 = list1.next;
+                current.Value = list1!.Value;
+                list1 = list1.Next;
             }
             else
             {
-                current.val = list2.val;
-                list2 = list2.next;
+                current.Value = list2.Value;
+                list2 = list2.Next;
             }
 
             if (list1 != null || list2 != null)
             {
-                current.next = new();
-                current = current.next;
+                current.Next = new();
+                current = current.Next;
             }
         }
 
         return result;
     }
 
-    public ListNode? MergeTwoLists(ListNode? list1, ListNode? list2)
+    public ListNode<int>? MergeTwoLists(ListNode<int>? list1, ListNode<int>? list2)
     {
-        var dummy = new ListNode();
+        var dummy = new ListNode<int>();
         var tail = dummy;
 
         while (list1 != null && list2 != null)
         {
-            if (list1.val < list2.val)
+            if (list1.Value < list2.Value)
             {
-                tail.next = list1;
-                list1 = list1.next;
+                tail.Next = list1;
+                list1 = list1.Next;
             }
             else
             {
-                tail.next = list2;
-                list2 = list2.next;
+                tail.Next = list2;
+                list2 = list2.Next;
             }
-            tail = tail.next!;
+            tail = tail.Next!;
         }
 
-        tail.next = list1 ?? list2;
+        tail.Next = list1 ?? list2;
 
-        return dummy.next;
+        return dummy.Next;
     }
 }

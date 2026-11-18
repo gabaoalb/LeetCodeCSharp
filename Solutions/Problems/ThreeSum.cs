@@ -45,12 +45,14 @@ public class ThreeSumSolution
         for (int i = 0; i < nums.Length; i++)
         {
             count[nums[i]]--;
-            if (i > 0 && nums[i] == nums[i - 1]) continue;
+            if (i > 0 && nums[i] == nums[i - 1])
+                continue;
 
             for (int j = i + 1; j < nums.Length; j++)
             {
                 count[nums[j]]--;
-                if (j > i + 1 && nums[j] == nums[j - 1]) continue;
+                if (j > i + 1 && nums[j] == nums[j - 1])
+                    continue;
 
                 int target = -(nums[i] + nums[j]);
                 if (count.TryGetValue(target, out int value) && value > 0)
@@ -100,8 +102,10 @@ public class ThreeSumSolution
                         result.Add([nums[i], nums[j], nums[k]]);
                         j++;
                         k--;
-                        while (j < k && nums[j] == nums[j - 1]) j++;
-                        while (j < k && nums[k] == nums[k + 1]) k--;
+                        while (j < k && nums[j] == nums[j - 1])
+                            j++;
+                        while (j < k && nums[k] == nums[k + 1])
+                            k--;
                         break;
                 }
             }

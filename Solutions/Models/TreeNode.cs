@@ -91,7 +91,8 @@ public class TreeNode(int val = 0, TreeNode? left = null, TreeNode? right = null
 
     public static int[] ToArray(TreeNode? root)
     {
-        if (root == null) return [];
+        if (root == null)
+            return [];
 
         List<int> result = [];
         Queue<TreeNode> queue = [];
@@ -102,8 +103,10 @@ public class TreeNode(int val = 0, TreeNode? left = null, TreeNode? right = null
             TreeNode node = queue.Dequeue();
             result.Add(node.val);
 
-            if (node.left != null) queue.Enqueue(node.left);
-            if (node.right != null) queue.Enqueue(node.right);
+            if (node.left != null)
+                queue.Enqueue(node.left);
+            if (node.right != null)
+                queue.Enqueue(node.right);
         }
 
         return [.. result];

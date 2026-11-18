@@ -14,8 +14,8 @@ public class ContainerWithMostWaterSolution
         int maxArea = 0;
 
         for (int i = 0; i < height.Length; i++)
-            for (int j = i + 1; j < height.Length; j++)
-                maxArea = Math.Max(maxArea, (j - i) * Math.Min(height[i], height[j]));
+        for (int j = i + 1; j < height.Length; j++)
+            maxArea = Math.Max(maxArea, (j - i) * Math.Min(height[i], height[j]));
 
         return maxArea;
     }

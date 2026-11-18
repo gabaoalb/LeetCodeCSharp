@@ -14,7 +14,7 @@ public class GroupAnagramsTest
         {
             new() { "bat" },
             new() { "nat", "tan" },
-            new() { "ate", "eat", "tea" }
+            new() { "ate", "eat", "tea" },
         };
 
         var result = Solution.GroupAnagramsSortLinq(input);
@@ -28,10 +28,7 @@ public class GroupAnagramsTest
     public void Case2()
     {
         var input = new[] { "" };
-        var expected = new List<List<string>>
-        {
-            new() { "" }
-        };
+        var expected = new List<List<string>> { new() { "" } };
 
         var result = Solution.GroupAnagramsSortLinq(input);
 
@@ -44,10 +41,7 @@ public class GroupAnagramsTest
     public void Case3()
     {
         var input = new[] { "a" };
-        var expected = new List<List<string>>
-        {
-            new() { "a" }
-        };
+        var expected = new List<List<string>> { new() { "a" } };
 
         var result = Solution.GroupAnagramsSortLinq(input);
 

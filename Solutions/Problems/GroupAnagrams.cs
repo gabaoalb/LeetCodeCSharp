@@ -22,7 +22,7 @@ public class GroupAnagramsSolution
     public IList<IList<string>> GroupAnagramsSortLinq(string[] strs)
     {
         var groups = strs.GroupBy(s => new string([.. s.OrderBy(c => c)]))
-                         .ToDictionary(g => g.Key, g => g.ToList());
+            .ToDictionary(g => g.Key, g => g.ToList());
 
         return [.. groups.Values];
     }
@@ -46,5 +46,4 @@ public class GroupAnagramsSolution
 
         return [.. hashMap.Values];
     }
-
 }

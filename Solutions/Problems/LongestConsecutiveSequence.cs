@@ -38,7 +38,8 @@ public class LongestConsecutiveSequenceSolution
     /// <returns>The length of the longest consecutive elements sequence.</returns>
     public int LongestConsecutiveSorting(int[] nums)
     {
-        if (nums.Length == 0) return 0;
+        if (nums.Length == 0)
+            return 0;
 
         Array.Sort(nums);
         int maxLength = 1;
@@ -46,7 +47,8 @@ public class LongestConsecutiveSequenceSolution
 
         for (int i = 1; i < nums.Length; i++)
         {
-            if (nums[i] == nums[i - 1]) continue;
+            if (nums[i] == nums[i - 1])
+                continue;
             if (nums[i] == nums[i - 1] + 1)
             {
                 currentLength++;
@@ -75,7 +77,8 @@ public class LongestConsecutiveSequenceSolution
 
         foreach (int number in set)
         {
-            if (set.Contains(number - 1)) continue;
+            if (set.Contains(number - 1))
+                continue;
             int current = number;
             int length = 1;
             while (set.Contains(current + 1))
@@ -103,7 +106,8 @@ public class LongestConsecutiveSequenceSolution
 
         foreach (int number in nums)
         {
-            if (map.ContainsKey(number)) continue;
+            if (map.ContainsKey(number))
+                continue;
             int leftLength = map.GetValueOrDefault(number - 1, 0);
             int rightLength = map.GetValueOrDefault(number + 1, 0);
             int currentLength = leftLength + rightLength + 1;
@@ -111,8 +115,10 @@ public class LongestConsecutiveSequenceSolution
             map[number] = currentLength;
             maxLength = Math.Max(maxLength, currentLength);
 
-            if (leftLength > 0) map[number - leftLength] = currentLength;
-            if (rightLength > 0) map[number + rightLength] = currentLength;
+            if (leftLength > 0)
+                map[number - leftLength] = currentLength;
+            if (rightLength > 0)
+                map[number + rightLength] = currentLength;
         }
 
         return maxLength;

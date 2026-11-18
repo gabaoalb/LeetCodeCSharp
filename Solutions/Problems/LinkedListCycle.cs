@@ -4,9 +4,9 @@ namespace Solutions.Problems;
 
 public class LinkedListCycleSolution
 {
-    public bool HasCycleHashSet(ListNode head)
+    public bool HasCycleHashSet(ListNode<int> head)
     {
-        var hashSet = new HashSet<ListNode>();
+        var hashSet = new HashSet<ListNode<int>>();
         var current = head;
 
         while (current != null)
@@ -15,22 +15,21 @@ public class LinkedListCycleSolution
                 return true;
 
             hashSet.Add(current);
-            current = current.next;
+            current = current.Next;
         }
 
         return false;
     }
 
-
-    public bool HasCycle(ListNode head)
+    public bool HasCycle(ListNode<int> head)
     {
         (var fast, var slow) = (head, head);
 
-        while (fast != null && fast.next != null)
+        while (fast != null && fast.Next != null)
         {
-            (fast, slow) = (fast.next.next, slow.next);
+            (fast, slow) = (fast.Next.Next, slow?.Next);
 
-            if (fast.Equals(slow))
+            if (fast == slow)
                 return true;
         }
 
