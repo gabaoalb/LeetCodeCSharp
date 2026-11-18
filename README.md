@@ -32,4 +32,5 @@ This repository contains solutions to various LeetCode problems implemented in C
 | 271 | [Encode and Decode Strings](https://leetcode.com/problems/encode-and-decode-strings/) | Medium | [Code](https://github.com/gabaoalb/LeetCodeCSharp/blob/main/Solutions/Problems/EncodeAndDecodeStrings.cs) |
 | 347 | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) | Medium | [Code](https://github.com/gabaoalb/LeetCodeCSharp/blob/main/Solutions/Problems/TopKFrequentElements.cs) |
 | 543 | [Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/) | Easy | [Code](https://github.com/gabaoalb/LeetCodeCSharp/blob/main/Solutions/Problems/DiameterOfBinaryTree.cs) |
+| 739 | [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/) | Medium | [Code](https://github.com/gabaoalb/LeetCodeCSharp/blob/main/Solutions/Problems/DailyTemperatures.cs) |
 | 853 | [Car Fleet](https://leetcode.com/problems/car-fleet/) | Medium | [Code](https://github.com/gabaoalb/LeetCodeCSharp/blob/main/Solutions/Problems/CarFleet.cs) |
