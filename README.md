@@ -16,6 +16,7 @@ This repository contains solutions to various LeetCode problems implemented in C
 | 36 | [Valid Sudoku](https://leetcode.com/problems/valid-sudoku/) | Medium | [Code](https://github.com/gabaoalb/LeetCodeCSharp/blob/main/Solutions/Problems/ValidSudoku.cs) |
 | 42 | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) | Hard | [Code](https://github.com/gabaoalb/LeetCodeCSharp/blob/main/Solutions/Problems/TrappingRainWater.cs) |
 | 49 | [Group Anagrams](https://leetcode.com/problems/group-anagrams/) | Medium | [Code](https://github.com/gabaoalb/LeetCodeCSharp/blob/main/Solutions/Problems/GroupAnagrams.cs) |
+| 84 | [Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/) | Hard | [Code](https://github.com/gabaoalb/LeetCodeCSharp/blob/main/Solutions/Problems/LargestRectangleInHistogram.cs) |
 | 104 | [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | Easy | [Code](https://github.com/gabaoalb/LeetCodeCSharp/blob/main/Solutions/Problems/MaximumDepthOfBinaryTree.cs) |
 | 125 | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | Easy | [Code](https://github.com/gabaoalb/LeetCodeCSharp/blob/main/Solutions/Problems/ValidPalindrome.cs) |
 | 128 | [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) | Medium | [Code](https://github.com/gabaoalb/LeetCodeCSharp/blob/main/Solutions/Problems/LongestConsecutiveSequence.cs) |
