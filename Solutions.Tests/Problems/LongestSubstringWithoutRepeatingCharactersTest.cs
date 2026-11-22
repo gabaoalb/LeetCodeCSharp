@@ -4,14 +4,14 @@ namespace Solutions.Tests.Problems;
 
 public class LongestSubstringWithoutRepeatingCharactersTest
 {
-    private readonly LongestSubstringWithoutRepeatingCharacters Solution = new();
+    private readonly LongestSubstringWithoutRepeatingCharactersSolution Solution = new();
 
     [Fact]
     public void Case1()
     {
         string s = "abcabcbb";
         int expected = 3;
-        int actual = Solution.LengthOfLongestSubstringBruteForce(s);
+        int actual = Solution.LengthOfLongestSubstringDynamicProgramming(s);
         Assert.Equal(expected, actual);
     }
 
@@ -20,7 +20,7 @@ public class LongestSubstringWithoutRepeatingCharactersTest
     {
         string s = "bbbbb";
         int expected = 1;
-        int actual = Solution.LengthOfLongestSubstringBruteForce(s);
+        int actual = Solution.LengthOfLongestSubstringDynamicProgramming(s);
         Assert.Equal(expected, actual);
     }
 
@@ -29,7 +29,7 @@ public class LongestSubstringWithoutRepeatingCharactersTest
     {
         string s = "pwwkew";
         int expected = 3;
-        int actual = Solution.LengthOfLongestSubstringBruteForce(s);
+        int actual = Solution.LengthOfLongestSubstringDynamicProgramming(s);
         Assert.Equal(expected, actual);
     }
 }
