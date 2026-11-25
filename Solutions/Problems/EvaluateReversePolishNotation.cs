@@ -2,10 +2,15 @@ using Solutions.Models;
 
 namespace Solutions.Problems;
 
-public class EvaluateReversePolishNotation
+public class EvaluateReversePolishNotationSolution
 {
     /// <summary>
-    /// Brute force evaluation of Reverse Polish Notation (RPN) expression.
+    /// Copies the tokens into a list and repeatedly replaces the first operator and its
+    /// two preceding operands with the result, restarting the scan after each reduction.
+    /// <para>
+    /// Worst-case time is O(n²) because each reduction can scan and shift O(n) tokens.
+    /// Auxiliary space is O(n) for the list, where n is the number of tokens.
+    /// </para>
     /// </summary>
     /// <param name="tokens">Array of tokens representing the RPN expression.</param>
     /// <returns>The result of evaluating the RPN expression.</returns>
@@ -40,7 +45,12 @@ public class EvaluateReversePolishNotation
     }
 
     /// <summary>
-    /// Evaluation of Reverse Polish Notation (RPN) expression using a doubly linked list.
+    /// Scans a doubly linked list from left to right. At each operator, stores the result
+    /// in the operator node and relinks it to bypass the two operand nodes in constant time.
+    /// <para>
+    /// Time is O(n) to build and traverse the list, and auxiliary space is O(n) for the nodes,
+    /// where n is the number of tokens.
+    /// </para>
     /// </summary>
     /// <param name="tokens">Array of tokens representing the RPN expression.</param>
     /// <returns>The result of evaluating the RPN expression.</returns>
@@ -82,6 +92,14 @@ public class EvaluateReversePolishNotation
         return int.Parse(current!.Value!);
     }
 
+    /// <summary>
+    /// Reads tokens backward with a shared index. At each operator, recursively evaluates
+    /// the right operand first and then the left operand before applying the operation.
+    /// <para>
+    /// Time is O(n), where n is the number of tokens. Auxiliary space is O(h) for the call
+    /// stack, where h is the height of the expression tree measured in nodes and can reach O(n).
+    /// </para>
+    /// </summary>
     public int EvalRPNRecursive(string[] tokens)
     {
         int Evaluate(ref int index)
@@ -108,7 +126,12 @@ public class EvaluateReversePolishNotation
     }
 
     /// <summary>
-    /// Efficient evaluation of Reverse Polish Notation (RPN) expression using a stack.
+    /// Scans tokens from left to right, pushing numbers onto a stack. At each operator,
+    /// pops the right operand and then the left operand and pushes the result.
+    /// <para>
+    /// Time is O(n) because each token is processed once. Auxiliary space is O(n) in the
+    /// worst case for the stack, where n is the number of tokens.
+    /// </para>
     /// </summary>
     /// <param name="tokens">Array of tokens representing the RPN expression.</param>
     /// <returns>The result of evaluating the RPN expression.</returns>

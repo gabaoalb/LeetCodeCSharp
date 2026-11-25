@@ -4,7 +4,7 @@ namespace Solutions.Tests.Problems;
 
 public class EvaluateReversePolishNotationTest
 {
-    public EvaluateReversePolishNotation Solution { get; } = new();
+    public EvaluateReversePolishNotationSolution Solution { get; } = new();
 
     [Fact]
     public void Case1()
